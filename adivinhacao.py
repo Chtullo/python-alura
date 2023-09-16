@@ -38,13 +38,15 @@ for rodada in range(1, total_de_tentativas + 1):
     menor = chute < numero_secreto
 
     if acertou:
-        print("Você acertou!")
+        print("Você acertou e fez {} pontos!".format(pontos))
         break  # Sai do loop quando o jogador acerta
     else:
         if maior:
             print("Você errou! O seu chute foi maior do que o número secreto.")
         elif menor:
             print("Você errou! O seu chute foi menor do que o número secreto.")
+        pontos_perdidos = numero_secreto - chute
+        pontos = pontos - pontos_perdidos
 
 
 print("Fim do jogo.")
