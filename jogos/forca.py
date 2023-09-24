@@ -9,6 +9,8 @@ def jogar():
     enforcou = False
     acertou = False
 
+    print(letras_acertadas)
+
     while not enforcou and not acertou:
 
         chute = input("Qual letra? ")
